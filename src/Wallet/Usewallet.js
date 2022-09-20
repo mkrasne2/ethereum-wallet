@@ -344,7 +344,7 @@ export default function Usewallet() {
               Get Started 
             </Button>
             </Link> </Stack> : <Stack align={'center'}>
-          <PulseLoader color={loadcolor} loading={loading} size={40} /> 
+          {currentAccount.length > 1 && <PulseLoader color={loadcolor} loading={loading} size={40} /> }
           </Stack> }
           </>
           );
