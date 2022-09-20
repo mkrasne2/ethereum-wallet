@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/ethereum-wallet/static/css/main.ee962a9b.css",
-    "main.js": "/ethereum-wallet/static/js/main.547d3a54.js",
+    "main.js": "/ethereum-wallet/static/js/main.cba37f79.js",
     "static/js/787.11ba9691.chunk.js": "/ethereum-wallet/static/js/787.11ba9691.chunk.js",
     "index.html": "/ethereum-wallet/index.html",
     "main.ee962a9b.css.map": "/ethereum-wallet/static/css/main.ee962a9b.css.map",
-    "main.547d3a54.js.map": "/ethereum-wallet/static/js/main.547d3a54.js.map",
+    "main.cba37f79.js.map": "/ethereum-wallet/static/js/main.cba37f79.js.map",
     "787.11ba9691.chunk.js.map": "/ethereum-wallet/static/js/787.11ba9691.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ee962a9b.css",
-    "static/js/main.547d3a54.js"
+    "static/js/main.cba37f79.js"
   ]
 }
