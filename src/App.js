@@ -1,42 +1,69 @@
 import React from 'react';
-import {
-  ChakraProvider,
-  Box,
-  Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
-  theme,
-} from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
+import {  BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from './Home/Home.js';
+import Create from './Create/Create.js';
+import Wallet from './Wallet/Wallet.js';
+import Indwalletpush from './Wallet/Indwalletpush.js';
+import About from './About/About.js';
 
-function App() {
+function Homepage() {
   return (
-    <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
-          </VStack>
-        </Grid>
-      </Box>
-    </ChakraProvider>
+    <div>
+    <Home />
+    </div>
+  )
+  }
+
+  function Createpage() {
+    return (
+      <div>
+      <Create />
+      </div>
+    )
+    }
+
+    function Walletpage() {
+      return (
+        <div>
+        <Wallet />
+        </div>
+      )
+      }
+
+      function Indwalletpage() {
+        return (
+          <div>
+          <Indwalletpush />
+          </div>
+        )
+        }
+
+        function Aboutpage() {
+          return (
+            <div>
+            <About />
+            </div>
+          )
+          }
+
+export default function App() {
+  return (
+    <div >
+    <Routes>
+      <Route  path='/' element={<Homepage />} />
+    </Routes>
+    <Routes>
+      <Route  path='/create' element={<Createpage />} />
+    </Routes>
+    <Routes>
+      <Route  path='/wallet' element={<Walletpage />} />
+    </Routes>
+    <Routes>
+      <Route  path='/wallet/:id' element={<Indwalletpage />} />
+    </Routes>
+    <Routes>
+      <Route  path='/about' element={<Aboutpage />} />
+    </Routes>
+  </div>
   );
 }
-
-export default App;
